@@ -5,10 +5,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <title>TechWave</title>
+    <style>
+        .bg {
+            background: linear-gradient(45deg, #fcec38,
+                    #FB09B4, #9100F8);
+        }
+
+        .transition {
+            transition: 0.8s;
+        }
+
+        .transition:hover {
+            transform: scaleX(1.1);
+        }
+
+        .bg_img {
+            background-image: url(./assets/hero-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
 </head>
-<body>
-   <h1 class="bg-orange-700 h-[200px] text-lg font-[700] ">Hello World</h1>
+
+<body class="bg-[#1A0B2E]">
+<!-- Header Section -->
+    <header>
+        <!-- Navbar-->
+        <nav class="flex items-center justify-between">
+            <!--  -->
+            <div class="max-[576px]:m-[20px]  max-[576px]:text-[30px]  text-[40px] font-bold 
+                        min-[577px]:ml-[70px]
+                        min-[993px]:ml-[150px] ">
+                <h1 class="text-[#fff] font-[700] ">Tech<span
+                        class="
+                     bg-gradient-to-b from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">Wave</span>
+                </h1>
+            </div>
+            <!--  -->
+            <div class="hidden max-[576px]:hidden min-[577px]:hidden
+                               min-[993px]:flex min-[993px]:text-[#fff] min-[993px]:text-[16px] min-[993px]:font-[500]
+                               min-[993px]:justify-end min-[993px]:gap-10
+  ">
+                <a class="hover:text-[#f675b1]" href="#">About</a>
+                <a class="hover:text-[#f675b1]" href="#">Episodes</a>
+                <a class="hover:text-[#f675b1]" href="#">Host</a>
+            </div>
+            <!--  -->
+            <div class="  flex justify-center items-center bg gap-2  p-3  transition  rounded-[50px]
+            max-[576px]:hidden
+            min-[577px]:mr-[70px]  min-[577px]:m-[20px] 
+            min-[993px]:mr-[150px] min-[993px]:m-[20px] 
+            ">
+                <button class=" text-white text-[18px]">
+                    Subscribe
+                </button>
+                <img src="./assets/ArrowRight.svg" alt="" srcset="" class="h-[20px] w-[20px]">
+            </div>
+            <!-- Hamburger Icon -->
+            <div class="max-[576px]:m-[30px]
+                        min-[577px]:hidden 
+                        min-[993px]:hidden ">
+                <img src="./assets/hamburger-menu.png" alt="" srcset="" class="h-[20px] w-[20px] ">
+            </div>
+
+        </nav>
+
+        <!-- line  -->
+        <div class="h-[1px] bg-[#fff] opacity-8"></div>
+
+        <!-- Banner Section -->
+
+        <div class="max-[576px]:h-[550px] min-[577px]:h-[650px] min-[993px]:h-[650px] 
+        w-full bg-[url('./assets/hero-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center items-center">
+
+            <div class="max-[576px]:h-auto max-[576px]:w-[95%] 
+            min-[577px]:h-[550px] min-[577px]:w-[500px] 
+            min-[993px]:h-[550px] min-[993px]:w-[500px]  
+            flex flex-col justify-center items-center gap-y-4">
+
+                <!-- image section -->
+                <div class="max-[576px]:h-[230px] max-[576px]:w-[230px]
+                min-[577px]:h-[300px] min-[577px]:w-[300px]
+                min-[993px]:h-[300px] min-[993px]:w-[300px]">
+
+                    <div>
+                        <img src="./assets/hero-circle.png" alt="" srcset="" class="relative max-[576px]:h-[230px] max-[576px]:w-[230px]
+                        min-[577px]:h-[300px] min-[577px]:w-[300px]
+                        min-[993px]:h-[300px] min-[993px]:w-[300px]">
+                    </div>
+
+                    <div>
+                        <img src="./assets/microphone.png" alt="" srcset=""
+                            class="relative 
+                        max-[576px]:left-[65px] max-[576px]:bottom-[190px] max-[576px]:h-[140px] 
+                        max-[576px]:w-[105px]
+                         min-[577px]:left-[85px] min-[577px]:bottom-[245px] min-[577px]:h-[175px] min-[577px]:w-[130px]
+                        min-[993px]:left-[85px] min-[993px]:bottom-[245px] min-[993px]:h-[175px] min-[993px]:w-[130px]">
+                    </div>
+
+                    <button class="relative transition
+              max-[576px]:left-[150px] max-[576px]:bottom-[370px] max-[576px]:px-3 max-[576px]:py-1 max-[576px]:text-[14px]
+                 min-[577px]:left-[200px] min-[577px]:bottom-[480px] min-[577px]:px-4 min-[577px]:py-2 min-[577px]:text-[16px]
+                    min-[993px]:left-[200px] min-[993px]:bottom-[480px] min-[993px]:px-4 min-[993px]:py-2 min-[993px]:text-[16px]
+                    bg-[#0F8] rounded-[25px] font-bold">
+                        NEW
+                    </button>
+
+                </div>
+
+                <!-- text section -->
+                <div class="mt-4 
+                max-[576px]:h-auto max-[576px]:w-full
+                min-[577px]:h-[200px] min-[577px]:w-[450px]
+                min-[993px]:h-[200px] min-[993px]:w-[450px]">
+
+                    <div class="font-bold text-[#fff] text-center 
+                    max-[576px]:text-[32px]
+                    min-[577px]:text-[45px]
+                    min-[993px]:text-[45px]">
+                        TechWave
+                    </div>
+
+                    <div class="mt-2 font-[400] text-[#fff]/50 text-center opacity-0.8 
+                    max-[576px]:text-[12px] max-[576px]:px-2
+                    min-[577px]:text-[14px]
+                    min-[993px]:text-[14px]">
+                        Your daily dose of tech insights, productivity hacks, and personal growth
+                    </div>
+
+                    <div class="flex justify-center items-center gap-3 mt-[10px]
+                    max-[576px]:flex-row max-[576px]:gap-2">
+
+                        <!-- spotify btn -->
+                        <div class="flex justify-center items-center bg gap-2 p-3 transition rounded-[50px]
+                        max-[576px]:w-full max-[576px]:max-w-[310px]
+                        min-[577px]:w-auto
+                        min-[993px]:w-auto">
+                            <img src="./assets/spotify.png" alt="" srcset="" class="h-[20px] w-[20px]">
+
+                            <button class="text-white 
+                            max-[576px]:text-[16px]
+                            min-[577px]:text-[18px]
+                            min-[993px]:text-[18px]">
+                                Listen on Spotify
+                            </button>
+                        </div>
+
+                        <!-- subscribe button -->
+                        <div class="flex justify-center items-center border-2 border-solid border-[#00FF88] gap-2 pl-4 pt-2 pb-2 pr-4 transition rounded-[50px]
+                        max-[576px]:w-full max-[576px]:max-w-[310px]
+                        min-[577px]:w-auto
+                        min-[993px]:w-auto">
+                            <img src="./assets/message.png" alt="" srcset="" class="h-[20px] w-[20px]">
+
+                            <button class="text-[#00FF88] 
+                            max-[576px]:text-[16px]
+                            min-[577px]:text-[18px]
+                            min-[993px]:text-[18px]">
+                                Subscribe
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
+
 </html>
